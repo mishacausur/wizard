@@ -1,6 +1,7 @@
 defmodule Wizard do
 
 	def main() do
+		Enum.each(1..100, &calculate/1)
 	end
 
 	def calculate(number) do
