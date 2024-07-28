@@ -6,10 +6,12 @@ defmodule Wizard do
 
 	@spec calculate(integer()) :: String.t()
 	def calculate(number) do
+		divisible_by_3 = rem(number, 3) == 0
+		divisible_by_5 = rem(number, 5) == 0
 		cond do
-			rem(number, 3) == 0 and rem(number, 5) == 0 -> "both"
-			rem(number, 3) == 0 -> "three"
-			rem(number, 5) == 0 -> "five"
+			divisible_by_3 and divisible_by_5 -> "both"
+			divisible_by_3 -> "three"
+			divisible_by_5 -> "five"
 			true -> to_string(number)
 		end
 	end
