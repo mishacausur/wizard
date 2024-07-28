@@ -1,7 +1,7 @@
 defmodule Wizard do
 
 	def main() do
-		Enum.each(1..100, &calculate/1)
+		Enum.map(1..100, &calculate/1)
 	end
 
 	@spec calculate(integer()) :: String.t()
