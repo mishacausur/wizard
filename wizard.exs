@@ -2,6 +2,7 @@ defmodule Wizard do
 
 	def main() do
 		Enum.map(1..100, &calculate/1)
+		|> Enum.join("-")
 	end
 
 	@spec calculate(integer()) :: String.t()
