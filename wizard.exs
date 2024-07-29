@@ -36,10 +36,10 @@ defmodule WizardTest do
 		assert calculate(3) == "three"
 		assert calculate(4) == "4"
 		assert calculate(5) == "five"
-		assert calculate(6) == three"
+		assert calculate(6) == "three"
 		assert calculate(7) == "7"
 		assert calculate(8) == "8"
-		assert calculate(9) == three"
+		assert calculate(9) == "three"
 		assert calculate(10) == "five"
 	end
 end
