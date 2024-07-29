@@ -42,4 +42,19 @@ defmodule WizardTest do
 		assert calculate(9) == "three"
 		assert calculate(10) == "five"
 	end
+
+	test "calculate for bigger 10" do 
+		assert calculate(11) == "11"
+		assert calculate(15) == "both"
+		assert calculate(20) == "five"
+		assert calculate(21) == "three"
+		assert calculate(45) == "both"
+	end
+
+	test "calculate100" do
+		result = calculate100()
+		assert Enum.take(result, 5) == ["1", "2", "three", "4", "five"]
+		assert Enum.at(result, 10) == "11"
+		assert Enum.at(result, 50) == "three"
+	end
 end
