@@ -1,5 +1,7 @@
 defmodule Wizard do
-
+	@moduledoc """
+	Wizard is a simple func with tetst
+	"""
 	def main() do
 		calculate100()
 		|> Enum.join(" ")
@@ -11,6 +13,7 @@ defmodule Wizard do
 		Enum.map(1..100, &calculate/1)
 	end
 
+	@doc "collect numbers"
 	@spec calculate(integer()) :: String.t()
 	def calculate(number) do
 		divisible_by_3 = rem(number, 3) == 0
@@ -43,7 +46,7 @@ defmodule WizardTest do
 		assert calculate(10) == "five"
 	end
 
-	test "calculate for bigger 10" do 
+	test "calculate for bigger 10" do
 		assert calculate(11) == "11"
 		assert calculate(15) == "both"
 		assert calculate(20) == "five"
