@@ -1,5 +1,9 @@
 defmodule GCD do
 
+  def gcd(a, b) when a < 0, do: gcd(-a, b)
+
+  def gcd(a, b) when b < 0, do: gcd(a, -b)
+
   def gcd(a, b) do
     case rem(a, b) do
       0 -> b
