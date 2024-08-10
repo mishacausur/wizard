@@ -21,5 +21,12 @@ defmodule Types do
 
     [fl: fl, fl1: fl1, fl2: fl2]
     |> Enum.each(fn {key, value} -> IO.puts("#{key} = #{value}") end)
+
+    #boolies
+    #true / false / nil
+    b = true and true
+    b1 = not true
+    [b: b, b1: b1]
+    |> Enum.each(fn {key, value} -> IO.puts("#{key} = #{value}") end)
   end
 end
