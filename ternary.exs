@@ -18,14 +18,26 @@ defmodule Ternary do
 
   def ternary_or(false, false), do: false
   def ternary_or(false, nil), do: nil
-  def ternary_or(false), true, do: true
+  def ternary_or(false, true), do: true
 
   def ternary_or(nil, false), do: nil
   def ternary_or(nil, nil), do: nil
-  def ternary_or(nil), true, do: true
+  def ternary_or(nil, true), do: true
 
   def ternary_or(true, false), do: true
   def ternary_or(true, nil), do: true
-  def ternary_or(true), true, do: true
+  def ternary_or(true, true), do: true
 
+end
+
+ExUnit.start()
+defmodule TernaryTest do
+  use ExUnit.Case
+  import Ternary
+
+  test "ternary not" do
+    assert ternary_not(false) == true
+    assert ternary_not(true) == false
+    assert ternary_not(nil) == nil
+  end
 end
